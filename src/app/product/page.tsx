@@ -1,6 +1,5 @@
-import Hero from '@/components/page/home/hero';
-import Inovation from '@/components/page/home/inovation';
-import Solution from '@/components/page/home/solution';
+import Description from '@/components/micro/Description';
+import SectionTitle from '@/components/micro/SectionTitle';
 
 export const metadata = {
   title: 'A.N.I Tech - Beranda',
@@ -12,15 +11,17 @@ export const metadata = {
   },
 };
 
-export default function Home() {
+export default function Product() {
   return (
-    <div className='mx-28'>
-      {/* Hero */}
-      <Hero />
-      {/* Solution */}
-      <Solution />
-      {/* Inovation */}
-      <Inovation />
+    <div>
+      <SectionTitle
+        title='Ini Halaman Product A.N.I'
+        className='text-center'
+      />
+      <Description
+        className='text-center'
+        text='ANI Tech lahir pada bulan April 2024 sebagai sebuah perusahaan yang berkomitmen menghadirkan inovasi teknologi di era digital.'
+      />
     </div>
   );
 }
