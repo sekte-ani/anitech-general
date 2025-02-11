@@ -1,5 +1,12 @@
 import Description from '@/components/micro/Description';
 import SectionTitle from '@/components/micro/SectionTitle';
+import Hero from '../../components/page/about/Hero';
+import History from '../../components/page/about/History';
+import HistoryFromStudent from '@/components/page/about/HistoryFromStudent';
+import Vision from '@/components/page/about/Vision';
+import Mission from '@/components/page/about/Mission';
+import Quotes from '@/components/page/about/Quotes';
+import Contact from '@/components/page/about/Contact';
 
 export const metadata = {
   title: 'A.N.I Tech - About',
@@ -13,15 +20,14 @@ export const metadata = {
 
 export default function About() {
   return (
-    <div>
-      <SectionTitle
-        title='Ini Adalah Halaman About A.N.I'
-        className='text-center'
-      />
-      <Description
-        className='text-center'
-        text='ANI Tech lahir pada bulan April 2024 sebagai sebuah perusahaan yang berkomitmen menghadirkan inovasi teknologi di era digital.'
-      />
+    <div className='overflow-hidden'>
+      <Hero />
+      <History />
+      <HistoryFromStudent />
+      <Vision />
+      <Mission />
+      <Quotes />
+      <Contact />
     </div>
   );
 }

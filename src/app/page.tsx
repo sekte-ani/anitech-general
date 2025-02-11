@@ -1,4 +1,5 @@
 import MemberCard from '@/components/micro/MemberCard';
+import Faq from '@/components/page/home/faq';
 import Hero from '@/components/page/home/hero';
 import Inovation from '@/components/page/home/inovation';
 import Solution from '@/components/page/home/solution';
@@ -42,6 +43,8 @@ export default function Home() {
         <Solution />
         {/* Inovation */}
         <Inovation />
+        {/* FAQ */}
+        <Faq />
 
         {/* <MemberSection data={test} /> */}
       </div>

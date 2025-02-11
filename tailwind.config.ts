@@ -24,6 +24,7 @@ export default {
       },
       backgroundImage: {
         'card-hover': 'linear-gradient(145deg, #4C9DAE 0%, #2C4D77 58%)',
+        quotes: 'linear-gradient(90deg, #fbfdfe33 0%, #307a8a33 100%)',
       },
     },
   },
