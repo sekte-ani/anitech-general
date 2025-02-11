@@ -1,48 +1,36 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import ImageComponent from './ImageComponent';
+import { IMAGE_URL } from '@/config/endpoint';
+
+interface Member {
+  id: number;
+  name: string;
+  role_name: string[];
+  images: string;
+}
 
 interface MemberCardProps {
-  img: string;
-  name: string;
-  division: string;
+  data: Member;
   alt: string;
 }
 
-const MemberCard: React.FC<MemberCardProps> = ({
-  img,
-  name,
-  division,
-  alt,
-}) => {
-  const [windowWidth, setWindowWidth] = useState<number | null>(null);
-
-  useEffect(() => {
-    // Fungsi untuk update ukuran layar
-    const handleResize = () => setWindowWidth(window.innerWidth);
-
-    // Panggil saat komponen dimount
-    handleResize();
-
-    // Tambahkan event listener
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup saat komponen di-unmount
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+const MemberCard: React.FC<MemberCardProps> = ({ data, alt }) => {
   return (
     <div className='w-fit relative flex justify-center'>
       <ImageComponent
-        src={img}
+        src={data.images ? `${IMAGE_URL}/${data.images}` : '/img/bahlil.png'}
         alt={alt}
-        className={`w-60 md:w-48 lg:w-60 2xl:w-80 rounded-tr-md rounded-bl-xl`}
+        className={`w-60 md:w-48 lg:w-60 2xl:w-72 rounded-tr-md rounded-bl-xl`}
         imageStyle='rounded-tr-[7rem] rounded-bl-[7rem]'
       />
       <div className='bg-white absolute -bottom-10 w-4/5 h-36 text-center flex flex-col justify-center px-5 rounded-tr-[4rem] rounded-bl-[4rem] shadow-md shadow-gray-300'>
         <h1 className='text-sm 2xl:text-base text-title font-semibold'>
-          {name}
+          {data.name}
         </h1>
-        <p className='text-xs 2xl:text-sm text-desc mt-3'>{division}</p>
+        <p className='text-xs 2xl:text-sm text-desc mt-3'>
+          {data.role_name.join('& ')}
+        </p>
       </div>
     </div>
   );

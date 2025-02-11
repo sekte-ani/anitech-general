@@ -7,7 +7,7 @@ function Contact() {
   return (
     <section
       data-aos='fade-up'
-      className='text-center flex flex-col items-center px-10 mt-20'
+      className='text-center flex flex-col items-center px-10 mt-40'
     >
       <SectionTitle title='Membangun atau <br/> meningkatkan? Kami bantu!' />
       <Description
