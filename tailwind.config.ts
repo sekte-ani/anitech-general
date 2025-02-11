@@ -22,6 +22,9 @@ export default {
         secondary: '#D5E1E9',
         black_ani: '#252525',
       },
+      backgroundImage: {
+        'card-hover': 'linear-gradient(145deg, #4C9DAE 0%, #2C4D77 58%)',
+      },
     },
   },
   plugins: [],

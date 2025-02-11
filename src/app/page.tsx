@@ -37,7 +37,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <Hero />
-      <div className='px-10 lg:px-20 xl:px-48'>
+      <div className='px-10 lg:px-20 xl:px-40'>
         {/* Solution */}
         <Solution />
         {/* Inovation */}

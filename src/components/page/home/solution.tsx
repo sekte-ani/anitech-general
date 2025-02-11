@@ -11,29 +11,33 @@ function Solution() {
       title: 'Konsultasi <br/> Awal',
       description:
         'Mengadakan sesi diskusi dengan klien untuk memahami kebutuhan, tantangan, dan tujuan secara lebih mendalam',
+      iconStyle: 'text-[#BDDBFF] group-hover:text-white',
     },
     {
       icon: BsFillLaptopFill,
       title: 'Pengembangan <br/> & Implementasi',
       description:
         'Melakukan pengembangan solusi atau layanan digital yang disepakati, dengan pengujian dan feedback berkelanjutan.',
+      iconStyle: 'text-[#D2BFF7] group-hover:text-white',
     },
     {
       icon: FaUser,
       title: 'Pendekatan <br/> Personalisasi',
       description:
         'Memastikan setiap solusi dibuat khusus, tidak menggunakan pendekatan yang sama untuk semua.',
+      iconStyle: 'text-[#A7DCEB] group-hover:text-white',
     },
     {
       icon: ImPriceTag,
       title: 'Fleksibilitas <br/> Harga',
       description:
         'Menawarkan harga fleksibel sesuai anggaran klien dengan pilihan paket yang memberikan nilai terbaik.',
+      iconStyle: 'text-[#FDBFC1] group-hover:text-white',
     },
   ];
 
   return (
-    <div className='flex justify-between mt-44'>
+    <div className='flex flex-col xl:flex-row justify-between mt-20 xl:mt-44'>
       <div>
         <SectionTitle
           className=''
@@ -44,8 +48,9 @@ function Solution() {
           text='Kami mengembangkan produk digital untuk <br/> mengatasi tantangan teknologi, mempercepat <br/> transformasi, dan mendukung kemajuan bisnis.'
         />
       </div>
-      <div className='grid grid-rows-2 gap-5 w-1/2'>
-        <div className='grid grid-cols-2 gap-5'>
+      {/* Card */}
+      <div className='grid xl:grid-rows-2 gap-5 w-full mt-10 xl:mt-0 xl:w-1/2'>
+        <div className='grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5'>
           {cardContent.map((item, index) =>
             index < 2 ? (
               <Card
@@ -53,13 +58,15 @@ function Solution() {
                 Icon={item.icon}
                 title={item.title}
                 description={item.description}
+                className='group hover:bg-card-hover hover:text-white'
+                iconStyle={item.iconStyle}
               />
             ) : (
               ''
             ),
           )}
         </div>
-        <div className='grid grid-cols-2 gap-5'>
+        <div className='grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5'>
           {cardContent.map((item, index) =>
             index >= 2 ? (
               <Card
@@ -67,6 +74,8 @@ function Solution() {
                 Icon={item.icon}
                 title={item.title}
                 description={item.description}
+                className='group hover:bg-card-hover hover:text-white'
+                iconStyle={item.iconStyle}
               />
             ) : (
               ''
