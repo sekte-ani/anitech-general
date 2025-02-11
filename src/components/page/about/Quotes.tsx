@@ -4,7 +4,10 @@ import ImageComponent from '@/components/micro/ImageComponent';
 function Quotes() {
   return (
     <section className='bg-quotes flex items-center justify-center gap-10 xl:gap-32 py-20 px-10 md:px-20 lg:px-40 xl:px-52 mt-20'>
-      <div className='md:w-4/5 lg:w-1/2'>
+      <div
+        data-aos='fade-up'
+        className='md:w-4/5 lg:w-1/2'
+      >
         <Description
           className='italic text-title'
           text='“Transformasi dari sebuah tim belajar menjadi perusahaan adalah bukti nyata bahwa semangat belajar, kerja keras, dan kolaborasi dapat menghasilkan sesuatu yang luar biasa.”'
@@ -23,6 +26,7 @@ function Quotes() {
         </div>
       </div>
       <ImageComponent
+        aos='fade-left'
         className='w-72 hidden md:block'
         src='/img/about/ferdi_round.jpeg'
         alt='perdi'

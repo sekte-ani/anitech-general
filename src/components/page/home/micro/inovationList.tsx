@@ -5,6 +5,7 @@ interface InovationListProps {
   title: string;
   description: string;
   className?: string;
+  aos?: string;
 }
 
 const InovationList: React.FC<InovationListProps> = ({
@@ -12,9 +13,13 @@ const InovationList: React.FC<InovationListProps> = ({
   title,
   description,
   className,
+  aos,
 }) => {
   return (
-    <section className={`mt-10 cursor-default text-desc ${className}`}>
+    <section
+      data-aos={aos}
+      className={`mt-10 cursor-default text-desc ${className}`}
+    >
       <h1 className='font-semibold text-3xl'>
         {ListNumber} &nbsp;&nbsp;&nbsp; {title}
       </h1>

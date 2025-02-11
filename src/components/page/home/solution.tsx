@@ -9,11 +9,15 @@ const CardSolution = () => {
   return (
     <div className='relative grid gap-5 w-full mt-10 xl:mt-0 xl:w-1/2'>
       <ImageComponent
+        aos='fade-left'
         src='/img/bg_solution.png'
         alt='bg solution'
         className='absolute -z-10 -bottom-32 -right-44'
       />
-      <div className='grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5'>
+      <div
+        data-aos='fade-up'
+        className='grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5'
+      >
         {SolutionData.map((item, index) =>
           index < 2 ? (
             <Card
@@ -29,7 +33,10 @@ const CardSolution = () => {
           ),
         )}
       </div>
-      <div className='grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5'>
+      <div
+        data-aos='fade-up'
+        className='grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5'
+      >
         {SolutionData.map((item, index) =>
           index >= 2 ? (
             <Card
@@ -52,7 +59,7 @@ const CardSolution = () => {
 function Solution() {
   return (
     <div className='flex flex-col xl:flex-row justify-between mt-20 xl:mt-44'>
-      <div>
+      <div data-aos='fade-right'>
         <SectionTitle
           className=''
           title='Solusi Digital <br/> untuk kemajuan <br/> bisnis anda.'

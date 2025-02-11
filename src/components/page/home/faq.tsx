@@ -4,7 +4,10 @@ import Description from '@/components/micro/Description';
 
 function Faq() {
   return (
-    <section className='mt-20 text-center'>
+    <section
+      data-aos='fade-up'
+      className='mt-20 text-center'
+    >
       <SectionTitle title='Frequently Asked Question' />
       <Description
         className='my-5'

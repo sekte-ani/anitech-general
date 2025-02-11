@@ -3,7 +3,10 @@ import SectionTitle from '@/components/micro/SectionTitle';
 
 function Vision() {
   return (
-    <section className='text-center flex flex-col items-center px-10 mt-20'>
+    <section
+      data-aos='fade-up'
+      className='text-center flex flex-col items-center px-10 mt-20'
+    >
       <SectionTitle title='Visi' />
       <Description
         className='mt-7 w-full md:text-96 lg:w-[500px] xl:w-[800px]'
