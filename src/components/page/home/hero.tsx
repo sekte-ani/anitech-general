@@ -6,7 +6,10 @@ import SectionTitle from '@/components/micro/SectionTitle';
 
 function Hero() {
   return (
-    <div className='flex flex-col items-center gap-10 py-20'>
+    <div
+      className={`relative flex flex-col items-center gap-10 py-40 bg-[url('/img/footer_grid.png')] bg-cover`}
+    >
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-[#BCC7E0]/20 to-[#2E9CA7]/20 -z-10 pointer-events-none'></div>
       <SectionTitle
         title='Transformasi digital <br> dimulai dari sini'
         className='text-center'

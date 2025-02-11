@@ -3,29 +3,16 @@ import Link from 'next/link';
 import ImageComponent from '../micro/ImageComponent';
 import PrimaryButton from '../micro/PrimaryButton';
 import { useRouter } from 'next/navigation';
+import { navigation } from '@/store/statis/partials/Nav';
 
 function Navbar() {
   const router = useRouter();
-  const navigation = [
-    {
-      title: 'Beranda',
-      link: '/',
-    },
-    {
-      title: 'Tentang',
-      link: '/about',
-    },
-    {
-      title: 'Produk',
-      link: '/product',
-    },
-  ];
 
   const handleClick = () => {
     router.push('/contact');
   };
   return (
-    <nav className='flex justify-around items-center py-5'>
+    <nav className='flex justify-around items-center py-5 bg-white'>
       <Link href='/'>
         <ImageComponent
           src='/img/logo.png'
