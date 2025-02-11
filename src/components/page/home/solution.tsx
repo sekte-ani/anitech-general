@@ -4,6 +4,7 @@ import { BsFillLaptopFill } from 'react-icons/bs';
 import { ImPriceTag } from 'react-icons/im';
 import Card from '@/components/micro/Card';
 import Description from '@/components/micro/Description';
+import ImageComponent from '@/components/micro/ImageComponent';
 function Solution() {
   const cardContent = [
     {
@@ -49,7 +50,15 @@ function Solution() {
         />
       </div>
       {/* Card */}
-      <div className='grid xl:grid-rows-2 gap-5 w-full mt-10 xl:mt-0 xl:w-1/2'>
+      <div className='relative grid gap-5 w-full mt-10 xl:mt-0 xl:w-1/2'>
+        {/* <div
+          className={`absolute -bottom-20 -right-96 bg-[url('/img/bg_solution2.png')] bg-contain -z-10 w-full h-full`}
+        ></div> */}
+        <ImageComponent
+          src='/img/bg_solution.png'
+          alt='bg solution'
+          className='absolute -z-10 -bottom-32 -right-44'
+        />
         <div className='grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5'>
           {cardContent.map((item, index) =>
             index < 2 ? (
@@ -58,7 +67,7 @@ function Solution() {
                 Icon={item.icon}
                 title={item.title}
                 description={item.description}
-                className='group hover:bg-card-hover hover:text-white'
+                className='group bg-white hover:bg-card-hover hover:text-white'
                 iconStyle={item.iconStyle}
               />
             ) : (
@@ -74,7 +83,7 @@ function Solution() {
                 Icon={item.icon}
                 title={item.title}
                 description={item.description}
-                className='group hover:bg-card-hover hover:text-white'
+                className='group bg-white hover:bg-card-hover hover:text-white'
                 iconStyle={item.iconStyle}
               />
             ) : (
