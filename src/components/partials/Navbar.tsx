@@ -25,7 +25,7 @@ function Navbar() {
     router.push('/contact');
   };
   return (
-    <nav className='flex justify-around items-center py-5'>
+    <nav className='flex justify-around items-center py-5 bg-white'>
       <Link href='/'>
         <ImageComponent
           src='/img/logo.png'

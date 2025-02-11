@@ -1,6 +1,8 @@
+import MemberCard from '@/components/micro/MemberCard';
 import Hero from '@/components/page/home/hero';
 import Inovation from '@/components/page/home/inovation';
 import Solution from '@/components/page/home/solution';
+import MemberSection from '@/components/partials/MemberSection';
 
 export const metadata = {
   title: 'A.N.I Tech - Beranda',
@@ -12,15 +14,37 @@ export const metadata = {
   },
 };
 
+const test = [
+  {
+    img: '/img/bahlil.png',
+    name: 'Bahlil Swarawisesa Erliarto Putra',
+    division: 'Pimpinan Tim LGP 3KG',
+  },
+  {
+    img: '/img/bahlil.png',
+    name: 'Bahlil Swarawisesa Erliarto Putra',
+    division: 'Pimpinan Tim LGP 3KG',
+  },
+  {
+    img: '/img/bahlil.png',
+    name: 'Bahlil Swarawisesa Erliarto Putra',
+    division: 'Pimpinan Tim LGP 3KG',
+  },
+];
+
 export default function Home() {
   return (
-    <div className='mx-28'>
+    <>
       {/* Hero */}
       <Hero />
-      {/* Solution */}
-      <Solution />
-      {/* Inovation */}
-      <Inovation />
-    </div>
+      <div className='px-10 lg:px-20 xl:px-48'>
+        {/* Solution */}
+        <Solution />
+        {/* Inovation */}
+        <Inovation />
+
+        {/* <MemberSection data={test} /> */}
+      </div>
+    </>
   );
 }

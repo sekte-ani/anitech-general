@@ -14,9 +14,11 @@ export default {
         primary: '#5784B2',
         secondary: '#D5E1E9',
         black_ani: '#252525',
+        title: '#223650',
+        desc: '#343C46',
       },
       backgroundColor: {
-        primary: '#5784B2',
+        primary: '#4C9DAE',
         secondary: '#D5E1E9',
         black_ani: '#252525',
       },
