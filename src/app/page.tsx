@@ -1,8 +1,9 @@
 import MemberCard from '@/components/micro/MemberCard';
+import Faq from '@/components/page/home/faq';
 import Hero from '@/components/page/home/hero';
 import Inovation from '@/components/page/home/inovation';
 import Solution from '@/components/page/home/solution';
-import MemberSection from '@/components/partials/MemberSection';
+// import MemberSection from '@/components/partials/MemberSection';
 
 export const metadata = {
   title: 'A.N.I Tech - Beranda',
@@ -42,6 +43,8 @@ export default function Home() {
         <Solution />
         {/* Inovation */}
         <Inovation />
+        {/* FAQ */}
+        <Faq />
 
         {/* <MemberSection data={test} /> */}
       </div>

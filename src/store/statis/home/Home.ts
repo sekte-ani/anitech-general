@@ -16,6 +16,11 @@ interface InovationInterface {
   description: string;
 }
 
+interface FaqInterface {
+  question: string;
+  answer: string;
+}
+
 export const SolutionData: SoulutionInterface[] = [
   {
     icon: FaNoteSticky,
@@ -71,5 +76,33 @@ export const InovationData: InovationInterface[] = [
     title: 'Pengalaman Intuitif Untuk Pengguna',
     description:
       'Dengan produk user-friendly yang menawarkan pengalaman intuitif, meningkatkan kenyamanan pengguna dalam setiap interaksi.',
+  },
+];
+
+export const FaqData: FaqInterface[] = [
+  {
+    question: 'Apa itu Next.js?',
+    answer:
+      'Next.js adalah framework berbasis React untuk pengembangan aplikasi web yang cepat.',
+  },
+  {
+    question: 'Apa manfaat menggunakan Tailwind CSS?',
+    answer:
+      'Tailwind CSS memungkinkan pengembangan antarmuka yang lebih cepat dengan pendekatan utility-first.',
+  },
+  {
+    question: 'Bagaimana cara menggunakan React Hooks?',
+    answer:
+      'React Hooks memungkinkan Anda menggunakan state dan fitur React lainnya tanpa menulis kelas.',
+  },
+  {
+    question: 'Apa itu Framer Motion?',
+    answer:
+      'Framer Motion adalah pustaka animasi untuk React yang membuat animasi lebih mudah dan lebih halus.',
+  },
+  {
+    question: 'Mengapa menggunakan TypeScript dalam React?',
+    answer:
+      'TypeScript membantu menangkap error lebih awal dengan tipe statis, meningkatkan maintainability kode.',
   },
 ];

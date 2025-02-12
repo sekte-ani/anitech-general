@@ -7,6 +7,7 @@ interface ImageComponentProps {
   className?: string;
   imageStyle?: string;
   layout?: string;
+  aos?: string;
 }
 
 const ImageComponent: React.FC<ImageComponentProps> = ({
@@ -15,9 +16,13 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
   alt,
   imageStyle,
   layout = 'responsive',
+  aos,
 }) => {
   return (
-    <div className={`${className}`}>
+    <div
+      data-aos={aos}
+      className={`${className}`}
+    >
       <Image
         src={src}
         alt={alt}

@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
       {Icon && (
         <Icon
           className={`text-4xl ${iconStyle}`}
-          style={{ backgroundColor: iconStyle }}
+          // style={{ backgroundColor: iconStyle }}
         />
       )}
       <h1
