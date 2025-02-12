@@ -1,5 +1,7 @@
 import Description from '@/components/micro/Description';
 import SectionTitle from '@/components/micro/SectionTitle';
+import ProductCardSlider from '@/components/page/product/ProductCardSlider';
+
 
 export const metadata = {
   title: 'A.N.I Tech - Beranda',
@@ -13,15 +15,16 @@ export const metadata = {
 
 export default function Product() {
   return (
-    <div>
+    <div className='px-10 lg:px-20 xl:px-40'>
       <SectionTitle
-        title='Ini Halaman Product A.N.I'
-        className='text-center'
+        title='Produk Kami'
+        className='!text-[50px] pt-10 text-center'
       />
       <Description
-        className='text-center'
-        text='ANI Tech lahir pada bulan April 2024 sebagai sebuah perusahaan yang berkomitmen menghadirkan inovasi teknologi di era digital.'
+        className='text-center pt-4 font-medium max-w-prose mx-auto'
+        text='Kami menghadirkan solusi digital inovatif yang dirancang untuk meningkatkan efisiensi dan produktivitas. Dengan teknologi canggih dan pendekatan berbasis kebutuhan pengguna, produk kami memberikan pengalaman yang optimal dan hasil yang berdampak nyata.'
       />
+      <ProductCardSlider/>
     </div>
   );
 }
