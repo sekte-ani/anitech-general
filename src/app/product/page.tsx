@@ -18,7 +18,7 @@ export default function Product() {
     <div className='px-10 lg:px-20 xl:px-40'>
       <SectionTitle
         title='Produk Kami'
-        className='!text-[50px] pt-10 text-center'
+        className='pt-10 text-center'
       />
       <Description
         className='text-center pt-4 font-medium max-w-prose mx-auto'
