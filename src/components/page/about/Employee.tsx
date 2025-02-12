@@ -2,8 +2,14 @@
 import SectionTitle from '@/components/micro/SectionTitle';
 import EmployeeList from './micro/EmployeeList';
 import PrimaryButton from '@/components/micro/PrimaryButton';
+import { useRouter } from 'next/navigation';
 
 function Employee() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/about/employee');
+  };
   return (
     <div
       data-aos='fade-up'
@@ -15,7 +21,7 @@ function Employee() {
       />
       <EmployeeList />
       <PrimaryButton
-        onClick={() => {}}
+        onClick={handleClick}
         title='Selengkapnya'
         className='mt-32'
       />
