@@ -1,6 +1,7 @@
 'use client';
 import MemberCard from '@/components/micro/MemberCard';
-import { ExecutiveInterface, getExecutive } from '@/config/api';
+import { getExecutive } from '@/libs/Employee';
+import { ExecutiveInterface } from '@/types/app/Employee';
 import { useEffect, useState } from 'react';
 
 function EmployeeList() {
@@ -39,7 +40,7 @@ function EmployeeList() {
         className='grid grid-rows-3 sm:grid-rows-1 sm:grid-cols-3 justify-self-center gap-20 md:gap-14 lg:gap-16 xl:gap-28'
       >
         {data
-          .filter((_, idx) => idx < 3) // ✅ Hanya render item yang sesuai
+          .filter((_, idx) => idx < 3)
           .map((item) => (
             <MemberCard
               key={item.id}
@@ -54,7 +55,7 @@ function EmployeeList() {
         className='grid grid-rows-3 sm:grid-rows-1 sm:grid-cols-3 justify-self-center gap-20 md:gap-14 lg:gap-16 xl:gap-28'
       >
         {data
-          .filter((_, idx) => idx >= 3) // ✅ Hanya render item yang sesuai
+          .filter((_, idx) => idx >= 3)
           .map((item) => (
             <MemberCard
               key={item.id}
