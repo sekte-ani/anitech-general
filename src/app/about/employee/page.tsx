@@ -13,8 +13,8 @@ export default function Emplopyee() {
   }, []);
   return (
     <div className="px-10 lg:px-20 xl:px-40 pt-10">
-      <Tabs defaultValue="executive" className="flex flex-col items-center justify-center mt-10">
-        <TabsList className="mb-10">
+      <Tabs defaultValue="executive" className="flex flex-col items-center justify-centez`r mt-10">
+        <TabsList className="mb-10 flex items-center justify-center flex-wrap h-auto space-y-1">
           <TabsTrigger value="executive" className="w-[212px] border border-title">Manajemen Eksekutif</TabsTrigger>
           <TabsTrigger value="operasional" className="w-[212px] border border-title">Operasional</TabsTrigger>
           <TabsTrigger value="marketing" className="w-[212px] border border-title">Marketing</TabsTrigger>
