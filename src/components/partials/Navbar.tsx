@@ -42,7 +42,7 @@ function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav className="flex justify-between md:justify-around items-center py-5 px-6 md:px-16 bg-white shadow-md relative">
+    <nav className="flex justify-between md:justify-around items-center py-5 px-6 md:px-16 bg-white shadow-md sticky top-0 z-50">
       {/* Logo */}
       <Link href="/">
         <ImageComponent src="/img/logo.png" alt="Ini Sebuah Logo" className="w-10" />

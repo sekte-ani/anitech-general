@@ -1,5 +1,5 @@
-import Description from '@/components/micro/Description';
-import SectionTitle from '@/components/micro/SectionTitle';
+import ContactForms from '@/components/page/contact/ContactForms';
+import ContactInfo from '@/components/page/contact/ContactInfo';
 
 export const metadata = {
   title: 'A.N.I Tech - Beranda',
@@ -13,15 +13,11 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <div>
-      <SectionTitle
-        title='Ini Halaman Contact A.N.I'
-        className='text-center'
-      />
-      <Description
-        className='text-center'
-        text='ANI Tech lahir pada bulan April 2024 sebagai sebuah perusahaan yang berkomitmen menghadirkan inovasi teknologi di era digital.'
-      />
+    <div className='px-10 lg:px-20 xl:px-40'>
+      <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row items-center justify-center pt-12">
+        <ContactInfo />
+        <ContactForms />
+      </div>
     </div>
   );
 }

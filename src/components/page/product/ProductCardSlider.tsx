@@ -11,7 +11,7 @@ import {
     type CarouselApi,
 } from "@/components/micro/carousel";
 import PrimaryButton from "@/components/micro/PrimaryButton";
-import { Button } from "@/components/ui-shadcn/button";
+import { Button } from "@/components/ui/button";
 
 const ProductCardSlider = () => {
     const [api, setApi] = React.useState<CarouselApi>()
@@ -35,26 +35,24 @@ const ProductCardSlider = () => {
         <div className="flex flex-col justify-center items-center py-10 px-0 sm:px-4">
             <Carousel setApi={setApi} className="w-full mx-auto p-4 rounded-xl shadow-[0px_10px_50px_0px_rgba(0,_0,_0,_0.1)]">
                 <CarouselContent className="w-full flex items-center">
-                    {[0, 1].map((item) => (
-                        <CarouselItem key={item} className="w-full flex justify-center">
+                        <CarouselItem className="w-full flex justify-center">
                             <CardProduct className="w-full h-auto sm:p-6 md:p-8">
                                 <CardContent className="flex flex-col xl:flex-row items-center justify-center gap-4 sm:gap-6">
                                     {/* Gambar Responsif */}
                                     <Image
                                         src="/img/anis-carousel.png"
                                         draggable={false}
-                                        alt={`A.N.I Solution ${item}`}
+                                        alt={`A.N.I Solution`}
                                         width={500}
                                         height={400}
                                         className="w-full max-w-[250px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px] h-auto object-contain"
                                     />
 
                                     {/* Deskripsi */}
-                                    <DescriptionSection item={item} />
+                                    <DescriptionSection/>
                                 </CardContent>
                             </CardProduct>
                         </CarouselItem>
-                    ))}
                 </CarouselContent>
 
                 {/* Tombol Navigasi - Disembunyikan di HP jika kurang penting */}
@@ -77,13 +75,13 @@ const ProductCardSlider = () => {
 };
 
 /* Komponen untuk Deskripsi dengan Read More */
-const DescriptionSection = ({ item }: { item: number }) => {
+const DescriptionSection = () => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
         <div className="max-w-prose text-center xl:text-left">
             <h3 className="text-md sm:text-2xl font-semibold text-primary_ani">
-                A.N.I Solution {item}
+                A.N.I Solution
             </h3>
             <p
                 className={`text-gray-600 mt-2 font-medium text-[14px] sm:text-base md:text-lg text-justify transition-all ${isExpanded ? "line-clamp-none" : "line-clamp-6 sm:line-clamp-none"
@@ -103,7 +101,7 @@ const DescriptionSection = ({ item }: { item: number }) => {
             )}
             <PrimaryButton
                 title="Cek Selengkapnya"
-                onClick={() => alert(`Detail ${item}`)}
+                onClick={() => alert(`test alert`)}
                 className="mt-4 sm:mt-5"
             />
         </div>
