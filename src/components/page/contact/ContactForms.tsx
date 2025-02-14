@@ -54,7 +54,7 @@ const ContactForms = () => {
                                 <FormControl>
                                     <div className="relative">
                                         <MdEmail className="absolute left-3 top-1/2 -translate-y-1/2 text-title" size={18} />
-                                        <Input {...field} placeholder="masukkan email" className="pl-10" />
+                                        <Input {...field} placeholder="masukkan email" className="pl-10" type="email"/>
                                     </div>
                                 </FormControl>
                             </FormItem>
@@ -69,7 +69,7 @@ const ContactForms = () => {
                                 <FormControl>
                                     <div className="relative">
                                         <MdCall className="absolute left-3 top-1/2 -translate-y-1/2 text-title" size={18} />
-                                        <Input {...field} placeholder="masukkan nomor telepon" className="pl-10" />
+                                        <Input {...field} placeholder="masukkan nomor telepon" className="pl-10" type="number"/>
                                     </div>
                                 </FormControl>
                             </FormItem>
