@@ -117,7 +117,7 @@ const DescriptionSection = ({ product }: { product: Product }) => {
             )}
             <PrimaryButton
                 title="Cek Selengkapnya"
-                onClick={() => window.open(`https://anis.anitech.id/${product.id}`, "_blank")}
+                onClick={() => window.open(`https://anis.anitech.id/`, "_blank")}
                 className="mt-4 sm:mt-5"
             />
         </div>
