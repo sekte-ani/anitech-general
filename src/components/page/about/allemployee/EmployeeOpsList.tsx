@@ -1,7 +1,7 @@
 import Description from '@/components/micro/Description'
 import SectionTitle from '@/components/micro/SectionTitle'
 import React from 'react'
-import EmployeeList from '../micro/EmployeeList'
+import CardEmployeeList from './CardEmployeeList'
 
 const EmployeeOpsList = () => {
     return (
@@ -11,10 +11,10 @@ const EmployeeOpsList = () => {
                 title='Tim Operasional'
             />
             <Description
-                className='text-center font-medium max-w-prose mx-auto pb-12'
-                text='Bertanggung jawab dalam merancang strategi, memimpin dengan visi, dan mendorong inovasi untuk pertumbuhan perusahaan. Kami menggabungkan pengalaman, keahlian, dan pemahaman mendalam terhadap industri teknologi, serta berkomitmen menghadirkan solusi teknologi yang relevan dan berdampak.'
+                className='text-center font-medium max-w-5xl mx-auto pb-12'
+                text='Memastikan kelancaran bisnis dengan mengelola proses internal secara efisien, mulai dari manajemen operasional hingga pengelolaan keuangan. Kami bekerja untuk mendukung pertumbuhan dan keberlanjutan bisnis perusahaan serta memberikan layanan IT yang andal dan profesional.'
             />
-            <EmployeeList />
+            <CardEmployeeList division='operasional' />
         </div>
     )
 }

@@ -9,10 +9,10 @@ import EmployeeTiList from "@/components/page/about/allemployee/EmployeeTiList";
 
 export default function Emplopyee() {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll ke atas saat halaman dimuat
+    window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="px-10 lg:px-20 xl:px-40">
+    <div className="px-10 lg:px-20 xl:px-40 pt-10">
       <Tabs defaultValue="executive" className="flex flex-col items-center justify-center mt-10">
         <TabsList className="mb-10">
           <TabsTrigger value="executive" className="w-[212px] border border-title">Manajemen Eksekutif</TabsTrigger>
@@ -21,21 +21,23 @@ export default function Emplopyee() {
           <TabsTrigger value="produk" className="w-[212px] border border-title">Produk</TabsTrigger>
           <TabsTrigger value="ti" className="w-[212px] border border-title">Teknologi Informasi</TabsTrigger>
         </TabsList>
-        <TabsContent value="executive">
-          <EmployeeExecList />
-        </TabsContent>
-        <TabsContent value="operasional">
-          <EmployeeOpsList />
-        </TabsContent>
-        <TabsContent value="marketing">
-          <EmployeeMarketingList />
-        </TabsContent>
-        <TabsContent value="produk">
-          <EmployeeProductList />
-        </TabsContent>
-        <TabsContent value="ti">
-          <EmployeeTiList />
-        </TabsContent>
+        <div className="div">
+          <TabsContent value="executive">
+            <EmployeeExecList />
+          </TabsContent>
+          <TabsContent value="operasional">
+            <EmployeeOpsList />
+          </TabsContent>
+          <TabsContent value="marketing">
+            <EmployeeMarketingList />
+          </TabsContent>
+          <TabsContent value="produk">
+            <EmployeeProductList />
+          </TabsContent>
+          <TabsContent value="ti">
+            <EmployeeTiList />
+          </TabsContent>
+        </div>
       </Tabs>
     </div>);
 }
