@@ -39,13 +39,11 @@ const ContactForms = () => {
   });
 
   const onSubmit = async (values: unknown) => {
-    console.log(values);
     setIsLoading(true);
 
     try {
       const res = await axios.post('/api/send', values);
       setResponse('Pesanmu Berhasil Dikirim');
-      console.log('Ini hasil post', res);
     } catch (error: any) {
       console.error('Error:', error.response?.data || error.message);
       setResponse('Gagal mengirim pesan');
