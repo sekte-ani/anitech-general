@@ -22,7 +22,7 @@ const MemberCard: React.FC<MemberCardProps> = ({ data, alt }) => {
         src={data.images ? `${IMAGE_URL}/${data.images}` : '/img/bahlil.png'}
         alt={alt}
         className={`w-60 md:w-48 lg:w-60 2xl:w-72 rounded-tr-md rounded-bl-xl`}
-        imageStyle='rounded-tr-[7rem] rounded-bl-[7rem]'
+        imageStyle='rounded-tr-[7rem] rounded-bl-[7rem] rounded-tl-[3rem]'
       />
       <div className='bg-white absolute -bottom-10 w-4/5 h-36 text-center flex flex-col justify-center px-5 rounded-tr-[4rem] rounded-bl-[4rem] shadow-md shadow-gray-300'>
         <h1 className='text-sm 2xl:text-base text-title font-semibold'>

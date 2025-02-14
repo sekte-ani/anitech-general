@@ -1,5 +1,3 @@
-import Description from '@/components/micro/Description';
-import SectionTitle from '@/components/micro/SectionTitle';
 import Hero from '../../components/page/about/Hero';
 import History from '../../components/page/about/History';
 import HistoryFromStudent from '@/components/page/about/HistoryFromStudent';
