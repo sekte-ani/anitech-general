@@ -27,7 +27,7 @@ import axios from 'axios';
 
 const ContactForms = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [response, setResponse] = useState<string>('');
+  const [response, setResponse] = useState<string | null>(null);
   const form = useForm({
     defaultValues: {
       name: '',
@@ -43,7 +43,7 @@ const ContactForms = () => {
     setIsLoading(true);
 
     try {
-      const res = axios.post('/api/send', values);
+      const res = await axios.post('/api/send', values);
       setResponse('Pesanmu Berhasil Dikirim');
       console.log('Ini hasil post', res);
     } catch (error: any) {
@@ -189,11 +189,17 @@ const ContactForms = () => {
         <div className='w-full flex items-center justify-center'>
           <Button
             type='submit'
-            className='w-[80%] h-12 bg-primary_ani text-white'
+            disabled={isLoading}
+            className={`w-[80%] h-12  ${
+              !isLoading
+                ? 'bg-primary_ani text-white'
+                : 'bg-gray-200 text-gray-900'
+            }`}
           >
-            Kirim
+            {!isLoading ? 'Kirim' : 'Loading...'}
           </Button>
         </div>
+        {response && <p className='text-xs mt-3 text-center'>{response}</p>}
       </form>
     </Form>
   );
