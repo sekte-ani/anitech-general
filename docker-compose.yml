@@ -6,6 +6,8 @@ services:
     image: next-app
     container_name: nextgeneral-app
     restart: unless-stopped
+    environment:
+      - NEXT_PUBLIC_API_URL=http://82.112.230.106:8009
     volumes:
       - .:/app
       - node_modules:/app/node_modules
