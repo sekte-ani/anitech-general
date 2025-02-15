@@ -1,6 +1,6 @@
-import React from 'react';
-import ImageComponent from './ImageComponent';
-import { BsFillLaptopFill } from 'react-icons/bs';
+import React from "react";
+// import ImageComponent from './ImageComponent';
+// import { BsFillLaptopFill } from 'react-icons/bs';
 interface CardProps {
   Icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;
@@ -27,11 +27,11 @@ const Card: React.FC<CardProps> = ({
         />
       )}
       <h1
-        className='text-xl 2xl:text-2xl mt-3 font-semibold'
+        className="text-xl 2xl:text-2xl mt-3 font-semibold"
         dangerouslySetInnerHTML={{ __html: title }}
       />
       <p
-        className='text-sm mt-3'
+        className="text-sm mt-3"
         dangerouslySetInnerHTML={{ __html: description }}
       />
     </section>
