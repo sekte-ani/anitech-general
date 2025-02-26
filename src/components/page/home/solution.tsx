@@ -25,7 +25,7 @@ const CardSolution = () => {
               Icon={item.icon}
               title={item.title}
               description={item.description}
-              className='group text-title bg-white hover:bg-card-hover hover:text-white'
+              className='group text-title bg-white hover:bg-card-hover hover:shadow-top hover:text-white'
               iconStyle={item.iconStyle}
             />
           ) : (
@@ -44,7 +44,7 @@ const CardSolution = () => {
               Icon={item.icon}
               title={item.title}
               description={item.description}
-              className='group text-title bg-white hover:bg-card-hover hover:text-white'
+              className='group text-title bg-white hover:bg-card-hover hover:shadow-top hover:text-white'
               iconStyle={item.iconStyle}
             />
           ) : (

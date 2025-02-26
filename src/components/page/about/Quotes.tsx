@@ -3,10 +3,10 @@ import ImageComponent from '@/components/micro/ImageComponent';
 
 function Quotes() {
   return (
-    <section className='bg-quotes flex items-center justify-center gap-10 xl:gap-32 py-20 px-10 md:px-20 lg:px-40 xl:px-52 mt-20'>
+    <section className='bg-quotes flex items-center justify-between gap-10 xl:gap-32  mt-20'>
       <div
         data-aos='fade-up'
-        className='md:w-4/5 lg:w-1/2'
+        className='py-20 px-10 md:px-20 lg:px-40 xl:px-52 md:w-4/5 lg:w-1/2'
       >
         <Description
           className='italic text-title'
@@ -27,9 +27,9 @@ function Quotes() {
       </div>
       <ImageComponent
         aos='fade-left'
-        className='w-72 hidden md:block'
-        src='/img/about/ferdi_round.jpeg'
-        alt='perdi'
+        className='hidden md:block'
+        src='/img/about/quotes.png'
+        alt='quotes'
       />
     </section>
   );
