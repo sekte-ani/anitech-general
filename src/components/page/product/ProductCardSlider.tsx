@@ -12,23 +12,21 @@ import {
 } from '@/components/micro/carousel';
 import PrimaryButton from '@/components/micro/PrimaryButton';
 import { Button } from '@/components/ui/button';
-import { getProduct } from '@/libs/Product'; // Import API request
-import { Product } from '@/types/app/Product'; // Import interface
+import { getProduct } from '@/libs/Product';
+import { Product } from '@/types/app/Product';
 import { IMAGE_URL } from '@/config/endpoint';
 
 const ProductCardSlider = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const [products, setProducts] = useState<Product[]>([]); // State untuk data produk
+  const [products, setProducts] = useState<Product[]>([]);
 
-  // Fetch data dari API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const data = await getProduct();
-        setProducts(data); // Simpan data ke state
-        console.log(data);
+        setProducts(data);
       } catch (error) {
         console.error('Error fetching products:', error);
       }
@@ -61,7 +59,7 @@ const ProductCardSlider = () => {
                   <CardContent className='flex flex-col xl:flex-row items-center justify-center gap-4 sm:gap-6'>
                     {/* Gambar Responsif */}
                     <Image
-                      src={`${IMAGE_URL}/${product.images}`} // Menggunakan gambar dari API
+                      src={`${IMAGE_URL}/${product.images}`}
                       draggable={false}
                       alt={product.name}
                       width={500}
@@ -101,7 +99,6 @@ const ProductCardSlider = () => {
   );
 };
 
-/* 🔹 Komponen untuk Deskripsi dengan Read More */
 const DescriptionSection = ({ product }: { product: Product }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -114,7 +111,7 @@ const DescriptionSection = ({ product }: { product: Product }) => {
         className={`text-gray-600 mt-2 font-medium text-[14px] sm:text-base md:text-lg text-justify transition-all ${
           isExpanded ? 'line-clamp-none' : 'line-clamp-6 sm:line-clamp-none'
         }`}
-        dangerouslySetInnerHTML={{ __html: product.description }} // Gunakan HTML dari API
+        dangerouslySetInnerHTML={{ __html: product.description }}
       />
       {/* Tombol Read More */}
       {!isExpanded && (
@@ -128,9 +125,7 @@ const DescriptionSection = ({ product }: { product: Product }) => {
       )}
       <PrimaryButton
         title='Cek Selengkapnya'
-        onClick={() =>
-          window.open(`https://anis.anitech.id/${product.id}`, '_blank')
-        }
+        onClick={() => window.open(`https://anis.anitech.id/`, '_blank')}
         className='mt-4 sm:mt-5'
       />
     </div>
