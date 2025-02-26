@@ -20,7 +20,9 @@ function Hero() {
       />
       <PrimaryButton
         title='Mulai Sekarang'
-        onClick={() => {}}
+        onClick={() => {
+          document.location.href = '/contact';
+        }}
       />
     </div>
   );

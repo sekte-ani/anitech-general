@@ -22,8 +22,14 @@ export const navigation: NavInterface[] = [
 ];
 
 export const media: MediaInterface[] = [
-  { icon: MdEmail, link: '/' },
-  { icon: BsFillTelephoneFill, link: '/' },
-  { icon: TbBrandLinkedinFilled, link: '/' },
-  { icon: AiFillInstagram, link: '/' },
+  {
+    icon: MdEmail,
+    link: 'https://mail.google.com/mail/?view=cm&fs=1&to=aniteknologi@gmail.com',
+  },
+  { icon: BsFillTelephoneFill, link: 'https://wa.me/6285117202154' },
+  {
+    icon: TbBrandLinkedinFilled,
+    link: 'https://www.linkedin.com/company/a-n-i-tech',
+  },
+  { icon: AiFillInstagram, link: 'https://www.instagram.com/anitech_id' },
 ];

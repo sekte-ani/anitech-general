@@ -16,16 +16,12 @@ const Card: React.FC<CardProps> = ({
   className,
   iconStyle,
 }) => {
+  const IconComponent = Icon as React.ElementType;
   return (
     <section
-      className={`border-2 border-gray-200 shadow-md shadow-gray-100 rounded-md p-5 ${className}`}
+      className={`border-2 border-gray-200 shadow-md rounded-md p-5 ${className}`}
     >
-      {Icon && (
-        <Icon
-          className={`text-4xl ${iconStyle}`}
-          // style={{ backgroundColor: iconStyle }}
-        />
-      )}
+      {Icon && <IconComponent className={`text-4xl ${iconStyle}`} />}
       <h1
         className='text-xl 2xl:text-2xl mt-3 font-semibold'
         dangerouslySetInnerHTML={{ __html: title }}

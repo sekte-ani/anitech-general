@@ -13,7 +13,7 @@ const MissionContent = () => {
           key={idx}
           title={item.title}
           description={item.desc}
-          className='group text-title bg-white hover:bg-card-hover hover:text-white'
+          className='group text-title bg-white hover:bg-card-hover hover:shadow-top hover:text-white'
         />
       ))}
     </div>

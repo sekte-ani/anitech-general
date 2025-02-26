@@ -46,6 +46,8 @@ function Footer() {
           <Link
             key={idx}
             href={item.link}
+            target='__blank'
+            prefetch={false}
             className='text-[#223650] hover:text-gray-900'
           >
             <item.icon className='text-2xl' />
