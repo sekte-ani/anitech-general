@@ -5,7 +5,7 @@ import SectionTitle from '@/components/micro/SectionTitle';
 function Hero() {
   return (
     <section
-      className={`h-[40vh] lg:h-[70vh] flex flex-col justify-center px-10 lg:px-40 bg-right bg-[url('/img/about/about_hero.png')] bg-cover`}
+      className={`h-[40vh] lg:h-[70vh] flex flex-col justify-center px-10 lg:px-40 bg-right bg-[url('/img/about/about_hero.webp')] bg-cover`}
     >
       <SectionTitle title='Tentang Kami' />
       <Description

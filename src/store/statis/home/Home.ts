@@ -27,28 +27,28 @@ export const SolutionData: SoulutionInterface[] = [
     title: 'Konsultasi <br/> Awal',
     description:
       'Mengadakan sesi diskusi dengan klien untuk memahami kebutuhan, tantangan, dan tujuan secara lebih mendalam',
-    iconStyle: 'text-[#BDDBFF] group-hover:text-white',
+    iconStyle: 'text-konsultasi_awal group-hover:text-putih',
   },
   {
     icon: BsFillLaptopFill,
     title: 'Pengembangan <br/> & Implementasi',
     description:
       'Melakukan pengembangan solusi atau layanan digital yang disepakati, dengan pengujian dan feedback berkelanjutan.',
-    iconStyle: 'text-[#D2BFF7] group-hover:text-white',
+    iconStyle: 'text-implementasi group-hover:text-putih',
   },
   {
     icon: FaUser,
     title: 'Pendekatan <br/> Personalisasi',
     description:
       'Memastikan setiap solusi dibuat khusus, tidak menggunakan pendekatan yang sama untuk semua.',
-    iconStyle: 'text-[#A7DCEB] group-hover:text-white',
+    iconStyle: 'text-personalisasi group-hover:text-putih',
   },
   {
     icon: ImPriceTag,
     title: 'Fleksibilitas <br/> Harga',
     description:
       'Menawarkan harga fleksibel sesuai anggaran klien dengan pilihan paket yang memberikan nilai terbaik.',
-    iconStyle: 'text-[#FDBFC1] group-hover:text-white',
+    iconStyle: 'text-harga group-hover:text-putih',
   },
 ];
 
@@ -81,28 +81,18 @@ export const InovationData: InovationInterface[] = [
 
 export const FaqData: FaqInterface[] = [
   {
-    question: 'Apa itu Next.js?',
+    question: 'Apa itu A.N.I Tech?',
     answer:
-      'Next.js adalah framework berbasis React untuk pengembangan aplikasi web yang cepat.',
+      'Ani adalah perusahaan yang bergerak dibidang teknologi Dibangun dengan semangat kolaborasi, A.N.I Tech berfokus pada peningkatan kompetensi di bidang teknologi informasi.',
   },
   {
-    question: 'Apa manfaat menggunakan Tailwind CSS?',
+    question: 'Apakah Ani hanya melayani klien di Indonesia?',
     answer:
-      'Tailwind CSS memungkinkan pengembangan antarmuka yang lebih cepat dengan pendekatan utility-first.',
+      'Tidak, kami melayani klien baik di dalam maupun luar negeri dan dapat bekerja secara remote atau on-site sesuai kebutuhan.',
   },
   {
-    question: 'Bagaimana cara menggunakan React Hooks?',
+    question: 'Bagaimana cara saya memulai kerja sama dengan Ani?',
     answer:
-      'React Hooks memungkinkan Anda menggunakan state dan fitur React lainnya tanpa menulis kelas.',
-  },
-  {
-    question: 'Apa itu Framer Motion?',
-    answer:
-      'Framer Motion adalah pustaka animasi untuk React yang membuat animasi lebih mudah dan lebih halus.',
-  },
-  {
-    question: 'Mengapa menggunakan TypeScript dalam React?',
-    answer:
-      'TypeScript membantu menangkap error lebih awal dengan tipe statis, meningkatkan maintainability kode.',
+      'Anda bisa menghubungi kami melalui formulir konsultasi di website, dan tim kami akan segera mengatur pertemuan awal untuk membahas kebutuhan Anda.',
   },
 ];

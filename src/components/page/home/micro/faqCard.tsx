@@ -44,7 +44,7 @@ const FaqCard: React.FC<FaqCardProps> = () => {
             }`}
           >
             <div className='px-8 py-6 text-desc text-sm lg:text-base border-t font-medium'>
-              {item.answer}
+              <p className='text-left'>{item.answer}</p>
             </div>
           </div>
         </div>

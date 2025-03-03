@@ -58,35 +58,18 @@ function CardEmployeeList({ division }: CardEmployeeListProps) {
     );
 
   return (
-    <div className='grid gap-20 px-10 lg:px-20 xl:px-40'>
+    <div className='flex justify-center gap-20'>
       <div
         data-aos='fade-up'
-        className='grid grid-rows-3 sm:grid-rows-1 sm:grid-cols-3 justify-self-center gap-20 md:gap-14 lg:gap-16 xl:gap-28'
+        className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 md:gap-x-10 gap-y-10 md:gap-y-16'
       >
-        {data
-          .filter((_, idx) => idx < 3)
-          .map((item) => (
-            <MemberCard
-              key={item.id}
-              data={item}
-              alt={item.name}
-            />
-          ))}
-      </div>
-
-      <div
-        data-aos='fade-up'
-        className='grid grid-rows-3 sm:grid-rows-1 sm:grid-cols-3 justify-self-center gap-20 md:gap-14 lg:gap-16 xl:gap-28'
-      >
-        {data
-          .filter((_, idx) => idx >= 3)
-          .map((item) => (
-            <MemberCard
-              key={item.id}
-              data={item}
-              alt={item.name}
-            />
-          ))}
+        {data.map((item) => (
+          <MemberCard
+            key={item.id}
+            data={item}
+            alt={item.name}
+          />
+        ))}
       </div>
     </div>
   );
