@@ -1,13 +1,14 @@
-'use client';
-import MemberCard from '@/components/micro/MemberCard';
-import { getExecutive } from '@/libs/Employee';
-import { ExecutiveInterface } from '@/types/app/Employee';
-import { useEffect, useState } from 'react';
+"use client";
+import MemberCard from "@/components/micro/MemberCard";
+import { getExecutive } from "@/libs/Employee";
+import { ExecutiveInterface } from "@/types/app/Employee";
+import { useEffect, useState } from "react";
 
 function EmployeeList() {
   const [data, setData] = useState<ExecutiveInterface[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [notFound, setNotFound] = useState<boolean>(false);
 
   useEffect(() => {
@@ -27,7 +28,7 @@ function EmployeeList() {
         if (err instanceof Error) {
           setError(err.message);
         } else {
-          setError('An unexpected error occurred');
+          setError("An unexpected error occurred");
         }
       } finally {
         setLoading(false);
@@ -40,17 +41,13 @@ function EmployeeList() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className='flex justify-center gap-20 px-5 sm:px-10 lg:px-20 xl:px-40'>
+    <div className="flex justify-center gap-20 px-5 sm:px-10 lg:px-20 xl:px-40">
       <div
-        data-aos='fade-up'
-        className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 md:gap-x-10 gap-y-10 md:gap-y-16'
+        data-aos="fade-up"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 md:gap-x-10 gap-y-10 md:gap-y-16"
       >
         {data.map((item) => (
-          <MemberCard
-            key={item.id}
-            data={item}
-            alt={item.name}
-          />
+          <MemberCard key={item.id} data={item} alt={item.name} />
         ))}
       </div>
     </div>
