@@ -9,6 +9,10 @@ const InovationContent = () => {
       data-aos='fade-up'
       className='w-full xl:w-1/2'
     >
+      <div className="inline-flex items-center gap-2 mb-4">
+        <div className="h-px w-8 bg-primary"></div>
+        <span className="text-primary font-medium uppercase tracking-widest text-sm">Inovasi</span>
+      </div>
       <SectionTitle title='Menghadirkan solusi nyata dengan produk inovatif' />
       {InovationData.map((item, idx) => (
         <InovationList
@@ -26,13 +30,13 @@ const InovationContent = () => {
 
 function Inovation() {
   return (
-    <div className='relative bg-contain mt-48 lg:mt-48 2xlmt-72 flex flex-col-reverse xl:flex-row-reverse justify-between'>
+    <div className="relative bg-contain mt-32 xl:mt-40 flex flex-col-reverse xl:flex-row-reverse justify-between items-center gap-10 xl:gap-0">
       <InovationContent />
       <ImageComponent
-        aos='fade-right'
-        src='/img/inovation.png'
-        alt='inovastion'
-        className='xl:absolute w-[27rem] lg:w-[800px] xl:w-[800px] -ml-32 lg:-ml-60 xl:-ml-0 mb-10 xl:mb-0 bottom-0 xl:-left-96 2xl:-left-44'
+        aos="fade-right"
+        src="/img/inovation.png"
+        alt="inovastion"
+        className="xl:absolute w-[27rem] lg:w-[800px] xl:w-[800px] -ml-32 lg:-ml-60 xl:-ml-0 mb-10 xl:mb-0 bottom-0 xl:-left-96 2xl:-left-44"
       />
     </div>
   );

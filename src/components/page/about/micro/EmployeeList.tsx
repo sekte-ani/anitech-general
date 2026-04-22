@@ -37,15 +37,21 @@ function EmployeeList() {
     getExecutiveEmployee();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return (
+    <div className="flex justify-center py-16">
+      <div className="flex items-center gap-3 text-[#4C9DAE]">
+        <div className="w-5 h-5 border-2 border-[#4C9DAE] border-t-transparent rounded-full animate-spin"></div>
+        <span className="text-sm font-medium">Memuat data...</span>
+      </div>
+    </div>
+  );
+  if (error) return (
+    <p className="text-center text-red-500/70 py-8 text-sm">{error}</p>
+  );
 
   return (
-    <div className="flex justify-center gap-20 px-5 sm:px-10 lg:px-20 xl:px-40">
-      <div
-        data-aos="fade-up"
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 md:gap-x-10 gap-y-10 md:gap-y-16"
-      >
+    <div className="flex justify-center">
+      <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
         {data.map((item) => (
           <MemberCard key={item.id} data={item} alt={item.name} />
         ))}

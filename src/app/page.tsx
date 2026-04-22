@@ -36,17 +36,11 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      {/* Hero */}
       <Hero />
-      <div className="px-10 lg:px-20 xl:px-40 overflow-hidden">
-        {/* Solution */}
+      <div className="px-6 lg:px-16 xl:px-24 2xl:px-40 overflow-hidden">
         <Solution />
-        {/* Inovation */}
         <Inovation />
-        {/* FAQ */}
         <Faq />
-
-        {/* <MemberSection data={test} /> */}
       </div>
     </>
   );
